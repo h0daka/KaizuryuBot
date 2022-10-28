@@ -138,7 +138,7 @@ def chatbot(update: Update, context: CallbackContext):
             return
         kaizuryu = message.text
         bot.send_chat_action(chat_id, action="typing")
-        url = f"https://kukiapi.xyz/api/apikey=5043595447-KUKIUq9iSr0rz3/Kaizuryu/kaizuryubot/message={kaizuryu}"
+        url = f"https://api.bakufu.tech/api/chatbot/cleverbot?name=kaizuryu&owner=hodoka&message={kaizuryu}" ## using bakufu's chatbot api
         request = requests.get(url)
         results = json.loads(request.text)
         result = f"{results['reply']}"
